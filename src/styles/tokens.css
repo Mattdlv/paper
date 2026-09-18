@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Design tokens — Florencia & Matias
+   Single source of truth for color, type, spacing and motion primitives.
+   ========================================================================== */
+
+:root {
+  /* Color — boho elegante */
+  --color-bone: #f4f0e6;
+  --color-bone-soft: #eee8d9;
+  --color-bone-deep: #e6ddc6;
+  --color-olive: #667052;
+  --color-olive-deep: #4d5540;
+  --color-eucalyptus: #87947b;
+  --color-lavender: #a99ab8;
+  --color-lavender-soft: #cabfd4;
+  --color-gold: #b79a62;
+  --color-gold-soft: #d3bf94;
+  /* Darker gold for text that must stay readable on bone (WCAG AA, ~4.6:1) — --color-gold itself is decorative-only contrast. */
+  --color-gold-text: #856830;
+  --color-text: #34362f;
+  --color-text-soft: rgba(52, 54, 47, 0.72);
+  --color-paper: #faf7ef;
+  --color-line: rgba(52, 54, 47, 0.16);
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-sans: 'Jost', 'Segoe UI', sans-serif;
+  --font-script: 'Alex Brush', cursive;
+
+  --step-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.85rem);
+  --step-sm: clamp(0.875rem, 0.84rem + 0.18vw, 1rem);
+  --step-base: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --step-md: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --step-lg: clamp(1.75rem, 1.5rem + 1.2vw, 2.5rem);
+  --step-xl: clamp(2.5rem, 2rem + 2.4vw, 4rem);
+  --step-2xl: clamp(3.25rem, 2.4rem + 4vw, 5.75rem);
+
+  /* Spacing rhythm */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1.25rem;
+  --space-md: 2rem;
+  --space-lg: 3.5rem;
+  --space-xl: 5.5rem;
+  --space-2xl: 8rem;
+
+  /* Borders / shape */
+  --radius-sm: 2px;
+  --radius-md: 6px;
+  --radius-pill: 999px;
+  --line-hairline: 1px;
+
+  /* Motion */
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 0.4s;
+  --dur-base: 0.8s;
+  --dur-slow: 1.4s;
+
+  color-scheme: light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0.01ms;
+    --dur-base: 0.01ms;
+    --dur-slow: 0.01ms;
+  }
+}
